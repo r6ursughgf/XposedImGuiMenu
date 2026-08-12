@@ -15,7 +15,7 @@ android {
 
         ndk {
             // SET THIS TO THE ABI YOU WILL USE, DELETE THE OTHERS
-            abiFilters 'arm64-v8a', 'x86_64', 'armeabi-v7a', 'x86'
+            abiFilters 'arm64-v8a'
         }
 
 
@@ -62,8 +62,7 @@ dependencies {
     implementation libs.appcompat
     implementation libs.material
     implementation libs.constraintlayout
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
+    testImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     compileOnly libs.api
 
