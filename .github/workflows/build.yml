@@ -32,7 +32,7 @@ jobs:
           FILE=app/src/main/cpp/libraries/Dobby/external/logging/logging/logging.h
           echo "--- vorher ---"
           grep -n "Shared" "$FILE"
-          sed -i 's/^\(\s*\)\(static\s\+Logger\s*&\?\s*Shared\s*(\s*)\)/\1inline \2/' "$FILE"
+          sed -i '0,/^Logger \*Logger::Shared() {/s//inline Logger *Logger::Shared() {/' "$FILE"
           echo "--- nachher ---"
           grep -n "Shared" "$FILE"
 
