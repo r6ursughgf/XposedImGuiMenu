@@ -14,8 +14,8 @@ import de.robv.android.xposed.XposedHelpers;
 
 public class Inject implements IXposedHookZygoteInit  {
     boolean loaded = false;
-    String app_name = "com.app.here"; // EDIT THIS BEFORE COMPILING
-    String target_abi = Build.SUPPORTED_ABIS[0]; // SET THIS TO THE ABI YOU'RE TARGETING
+    String app_name = "com.blayzegames.newfps"; // Forward Assault package
+    String target_abi = "arm64-v8a"; // SET TO YOUR PHONE'S ABI
     public static InputStream resourceStream(String name) {
         return Objects.requireNonNull(Inject.class.getClassLoader()).getResourceAsStream(name);
     }
